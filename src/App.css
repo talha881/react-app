@@ -1,3 +1,7 @@
+.Container,.row-custom,.App-header,body{
+  box-sizing: border-box !important;
+}
+
 .App {
   text-align: center;
 }
@@ -11,6 +15,12 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+.row-custom{
+  display: flex;
+  flex-direction: row;
+  padding: 10px !important;
+  display: inline-block;
 }
 
 .App-header {
@@ -36,3 +46,5 @@
     transform: rotate(360deg);
   }
 }
+
+
