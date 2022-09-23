@@ -9,6 +9,9 @@ import Login from './pages/Login';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Header from './Header';
 import Detail from './pages/Detail'
+import Counter from './pages/Counter'
+import Todoform from './pages/Todoform';
+import EditTodo from './pages/EditTodo';
 
 
 
@@ -26,6 +29,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/Counter" element={<Counter/>} />
+          <Route path="/todoform" element={<Todoform/>} />
+          <Route path="/edit-todo/:id" element={<EditTodo/>} />
+
         </Routes>
       </BrowserRouter>
 

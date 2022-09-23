@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Card from '../Card'
-import { Products } from '../products'
-import '../App.css';
+import {useDispatch, useSelector} from 'react-redux'; 
+// import { Products } from '../products'
+import '../App.css'
+import {getAllProducts} from '../redux/actions/productsActions'
 
 const Home = () => {
-    const [Product, setproduct] = useState(Products)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getAllProducts());
+
+
+  },[])
+  const products = useSelector((state)=>state.products.products)
+    // const [Product, setproduct] = useState(Products)
     return (
         <div className="row">
         {
-          Product.map(p => <Card prod={p} />)
+           products.map(p => <Card prod={p}/>)
 
         }
         </div>

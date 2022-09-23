@@ -17,10 +17,14 @@ const Header = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/register">Create An Account</Link>
                         </li>
-
                         <li className="nav-item">
-                            <Link className="nav-link disabled" to="/" tabindex="-1" aria-disabled="true">Disabled</Link>
+                            <Link className="nav-link" to="/Counter">Counter</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/todoform">Todoform</Link>
+                        </li>
+
+                       
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
